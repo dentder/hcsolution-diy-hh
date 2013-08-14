@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+# How to connect the tortoiseSVN with your Google Code
  = TortoiseSVN with Google Code =
 Here's how to import your project using TortoiseSVN, the most popular Windows SVN client.
 
