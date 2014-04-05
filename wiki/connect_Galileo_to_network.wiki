@@ -7,9 +7,9 @@ How to connect Galileo to network.
 
 = Details =
 
-== 1. Preparation ==
 
-1. a router with config:
+
+===1. Prepare a router with config:===
    Gateway: 192.168.0.1
     DNS: 192.168.0.1
     subnet: 255.255.255.0
