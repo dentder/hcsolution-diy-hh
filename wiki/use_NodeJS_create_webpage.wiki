@@ -1,0 +1,29 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+
+
+1. Create file hello.js
+{{{
+    var http = require('http');
+    http.createServer(
+         function (req, res) {
+            res.writeHead(200,{'Content-Type': 'text/plain'});
+            res.end('Hello World. Hoang Hai checking\n');
+                              }
+                 ).listen(1337, ‘192.168.0.115');
+    console.log(‘Server running at http://192.168.0.115:1337/');
+}}}
+1. copy file to board
+
+{{{ scp hello.js root@192.168.0.115: }}}
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
