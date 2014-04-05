@@ -23,6 +23,7 @@ follow the instruction in:
 Follow the instruction in:
 [http://www.intel-software-academic-program.com/courses/diy/Intel_Academic_-_DIY_-_InternetOfThings/IntelAcademic_IoT_03_Networking.pdf]
 
+{{{       byte mac[] = { 0x98, 0x4F, 0xEE, 0x00, 0x6D, 0x16 };  }}}
 *Result:* 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
