@@ -60,10 +60,10 @@ void loop() {
 }
 }}}
 
-=== 3. Connect your _board_ to router ===
+=== 3. Connect your _board_ to router by _LAN CABLE_ ===
 
-=== 4. Turn off the board. ===
-=== 5. waiting to blink.===
+=== 4. Turn on the board. ===
+=== 5. waiting to LED blink.===
 === 6. test by: ===
 
 {{{   ssh root@192.168.0.115 }}}
