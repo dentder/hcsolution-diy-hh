@@ -4,7 +4,7 @@
 
 1. Set up Intel Galileo with Ubuntu
 2. Upload the sketch
-
+3. Networking
   
 
 
@@ -18,6 +18,12 @@ follow the instruction in:
 [www.intel-software-academic-program.com/courses/diy/Intel_Academic_-_DIY_-_InternetOfThings/IntelAcademic_IoT_02_HelloWorldIDE.pdf]
   Result: Sucessfully
 
+==3. Upload the networking ==
+
+Follow the instruction in:
+[http://www.intel-software-academic-program.com/courses/diy/Intel_Academic_-_DIY_-_InternetOfThings/IntelAcademic_IoT_03_Networking.pdf]
+
+*Result:* 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
