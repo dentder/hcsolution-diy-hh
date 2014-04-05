@@ -14,7 +14,7 @@ How to connect Galileo to network.
     DNS: 192.168.0.1
     subnet: 255.255.255.0
 
-2. Upload by *Arduino* to _Galileo board_ by this code:
+=== 2. Upload by *Arduino* to _Galileo board_ by this code:===
 
 {{{
    #include <SPI.h>
@@ -60,15 +60,21 @@ void loop() {
 }
 }}}
 
-3. Connect your _board_ to router
-4. Turn off the board.
-5. waiting to blink.
-6. test by:
+=== 3. Connect your _board_ to router ===
+
+=== 4. Turn off the board. ===
+=== 5. waiting to blink.===
+=== 6. test by: ===
+
 {{{   ssh root@192.168.0.115 }}}
-7. Result: * sucessfully *
+
+=== 7. Result: * sucessfully * ===
+
+
 {{{ root@clanton:~#  }}}
 
 
+===  End of report ===
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
