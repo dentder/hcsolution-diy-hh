@@ -83,6 +83,12 @@ hai@hai-Inspiron-1545:~/BSPGLL/meta-clanton_v0.7.5/yocto_build$
 
 }}}
 
+9. try to install something. get from: [http://elinux.org/EBC_Exercise_08_Installing_Development_Tools_-_bitbake]
+
+{{{
+sudo apt-get install diffstat texi2html texinfo subversion chrpath gettext
+}}}
+
 --- end of report ---
 ------------------------------------------------------
 Add your content here.  Format your content with:
