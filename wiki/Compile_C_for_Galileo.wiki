@@ -52,8 +52,8 @@ source poky/oe-init-build-env yocto_build
 
 }}}
 
-7. 
-
+=== 7. Finished at slide 12 | step 1/6 === 
+--- end of report ---
 ------------------------------------------------------
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
