@@ -1,6 +1,10 @@
-#summary Galileo board to execute it.
+#summary cross compiler allows you to compile a code for Galileo
 
 = Introduction =
+
+A cross compiler allows you to compile a code for Intel
+Quark SoC, on your computer, and then to move it to the
+Galileo board to execute it.
 
 Use the Linux Ubuntu 12,04
 Follow the documentation here:
