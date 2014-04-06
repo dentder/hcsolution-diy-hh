@@ -89,6 +89,15 @@ hai@hai-Inspiron-1545:~/BSPGLL/meta-clanton_v0.7.5/yocto_build$
 sudo apt-get install diffstat texi2html texinfo subversion chrpath gettext
 }}}
 
+10. got already install.
+
+11. try to install follow [http://cwraig.id.au/?p=507]
+
+{{{
+sudo apt-get install sed wget cvs subversion git-core coreutils unzip texi2html texinfo docbook-utils gawk python-pysqlite2 diffstat help2man make gcc build-essential g++ desktop-file-utils chrpath dosfstools kpartx
+
+}}}
+
 --- end of report ---
 ------------------------------------------------------
 Add your content here.  Format your content with:
