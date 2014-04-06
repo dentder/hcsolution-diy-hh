@@ -12,7 +12,8 @@ Follow the documentation here:
 
 1. Get package here
 
-{{{ sudo apt-get install build-essential sed wget cvs
+{{{ 
+sudo apt-get install build-essential sed wget cvs
 subversion git-core coreutils unzip texi2html texinfo
 libsdl1.2-dev docbook-utils gawk python-pysqlite2 diffstat
 help2man make gcc g++ desktop-file-utils chrpath libgl1-
@@ -26,22 +27,20 @@ groff libtool xterm p7zip-full bitbake
 
 3. Uncompressed
 
-{{{ 7z x Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z 
+{{{ 
+7z x Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z 
  }}}
 
 4. Rename your BSP folder with a shorter name
 
-{{{ mv Board_Support_Package_*** BSPGLL }}}
+{{{ 
+mv Board_Support_Package_*** BSPGLL 
+}}}
 
 5. Uncompress meta-clanton
 {{{
 
 hai@hai-Inspiron-1545:~$ cd BSPGLL/
-hai@hai-Inspiron-1545:~/BSPGLL$ ls
-clanton_linux_v3.8.7+v0.7.5.tar.gz  sha1sum.txt
-EDKII-volumes_v0.7.5.tar.gz         spi-flash-tools_v0.7.5.tar.gz
-grub-legacy_5775f32a+v0.7.5.tar.gz  sysimage_v0.7.5.tar.gz
-meta-clanton_v0.7.5.tar.gz
 hai@hai-Inspiron-1545:~/BSPGLL$ tar -xvzf meta-clanton_v0.7.5.tar.gz 
 
 }}}
