@@ -1,4 +1,6 @@
-#summary One-sentence summary of this page.
+#A cross compiler allows you to compile a code for Intel
+Quark SoC, on your computer, and then to move it to the
+Galileo board to execute it.
 
 = Introduction =
 
