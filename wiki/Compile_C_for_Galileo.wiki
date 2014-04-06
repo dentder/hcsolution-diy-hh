@@ -56,7 +56,33 @@ source poky/oe-init-build-env yocto_build
 
 }}}
 
-=== 7. Finished at slide 12 | step 1/6 === 
+7. copy the full image configuration from a sample:
+
+{{{
+cp ../meta-clanton-distro/recipes-core/images/image-full.bb ../meta-lanton-distro/recipes-core/images/image-sdk.bb
+
+}}}
+
+8. ... go to bitbake, got issue:(6/6)
+
+{{{
+
+
+hai@hai-Inspiron-1545:~/BSPGLL/meta-clanton_v0.7.5/yocto_build$ bitbake image-sdk -c populate-sdk
+Pseudo is not present but is required, building this first before the main build
+ERROR:  OE-core's config sanity checker detected a potential misconfiguration.
+    Either fix the cause of this error or at your own risk disable the checker (see sanity.conf).
+    Following is the list of potential problems / advisories:
+
+    Failed to create a file with a long name in TMPDIR. Please use a filesystem that does not unreasonably limit filename length.
+Failed to create a file with a long name in SSTATE_DIR. Please use a filesystem that does not unreasonably limit filename length.
+
+ERROR: Execution of event handler 'check_sanity_eventhandler' failed
+hai@hai-Inspiron-1545:~/BSPGLL/meta-clanton_v0.7.5/yocto_build$ 
+
+
+}}}
+
 --- end of report ---
 ------------------------------------------------------
 Add your content here.  Format your content with:
