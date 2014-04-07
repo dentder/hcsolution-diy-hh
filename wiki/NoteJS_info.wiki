@@ -20,6 +20,11 @@ NodeJS and zxing
 
 [https://github.com/komola/node-zxing]
 
+[http://briancelenza.com/blog/posts/2-the-road-to-the-node-qr-decoder-part-1]
+
+[http://blog.modulus.io/absolute-beginners-guide-to-nodejs]
+
+
 === Need consideration to use NodeJS for web and also barcode decoder ===
 
 
