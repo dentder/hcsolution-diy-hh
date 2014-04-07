@@ -20,6 +20,8 @@ NodeJS and zxing
 
 [https://github.com/komola/node-zxing]
 
+=== Need consideration to use NodeJS for web and also barcode decoder ===
+
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
