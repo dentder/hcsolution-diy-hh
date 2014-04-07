@@ -10,11 +10,15 @@ Follow the instruction here:
 
 = Details =
 1. In windows, run Command ( winkey + R then CMD then enter
+
 2.  type
-(((
+
+{{{
 npm install -g nodeclipse  
-)))
+}}}
+
 Enter
+
 3. type
 {{{
 npm install -g express 
