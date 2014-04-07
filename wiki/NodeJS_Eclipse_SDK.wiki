@@ -24,7 +24,12 @@ Enter
 npm install -g express 
 }}}
 Enter
-4. 
+
+4. Install zxing
+
+{{{
+npm install node-zxing
+}}}
 
 ---
 Add your content here.  Format your content with:
