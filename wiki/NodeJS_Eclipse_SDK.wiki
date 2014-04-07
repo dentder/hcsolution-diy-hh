@@ -1,0 +1,34 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+NodeJS + Eclipse for windows.
+Follow the instruction here:
+
+[http://www.nodeclipse.org/updates/]
+
+
+= Details =
+1. In windows, run Command ( winkey + R then CMD then enter
+2.  type
+
+(((
+   npm install -g nodeclipse  
+)))
+
+Enter
+3. type
+
+{{{
+   npm install -g express 
+}}}
+
+Enter
+
+4. 
+
+---
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
