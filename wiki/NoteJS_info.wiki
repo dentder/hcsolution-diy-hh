@@ -14,6 +14,11 @@ NodeJS
 
 [http://blog.modulus.io/absolute-beginners-guide-to-nodejs]
 
+NodeJS and zxing
+
+[https://nodejsmodules.org/new/tags/zxing]
+
+
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
