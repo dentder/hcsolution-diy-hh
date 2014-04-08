@@ -31,6 +31,11 @@ Enter
 npm install node-zxing
 }}}
 
+5. Install jave
+{{{
+npm install java
+}}}
+
 ---
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
