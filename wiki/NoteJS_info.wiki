@@ -25,6 +25,9 @@ NodeJS and zxing
 [http://blog.modulus.io/absolute-beginners-guide-to-nodejs]
 
 [http://howtonode.org/introduction-to-npm]  Using npm, Node Package Manager
+
+Package for NodeJS for :
+[https://github.com/bcelenza/node-qr/tree/decoder]
 === Need consideration to use NodeJS for web and also barcode decoder ===
 
 
