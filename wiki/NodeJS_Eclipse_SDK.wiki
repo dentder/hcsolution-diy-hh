@@ -53,6 +53,13 @@ npm install java --verbose
 }}}
 
 --> fail
+
+8. install java JDK
+{{{
+http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
+}}}
+
+9.Install Endine
 ---
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
