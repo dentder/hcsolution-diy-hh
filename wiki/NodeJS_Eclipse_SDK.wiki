@@ -36,6 +36,23 @@ npm install node-zxing
 npm install java
 }}}
 
+--> Fail
+
+6. and trying again installing node-gyp globally 
+
+{{{
+npm install node-gyp -g
+}}}
+
+--> sucessful
+
+7. Install java again
+
+{{{
+npm install java --verbose
+}}}
+
+--> fail
 ---
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
