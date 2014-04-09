@@ -1,6 +1,6 @@
 #summary One-sentence summary of this page.
 
-= Introduction =
+= Introduction. Still Fail =
 
 after try a lot of time to install node package to windows. really hard.
 I switch to install node on ubuntu to install java package.
