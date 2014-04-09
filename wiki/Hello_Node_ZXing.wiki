@@ -3,7 +3,7 @@
 = Introduction =
 to create first code to use node-zxing to read barcode
 
-[http://eem.bime.ntu.edu.tw/resource/clchuang/Clanton_Full_SDK_OpenJDK6.7z]
+[https://www.npmjs.org/package/node-zxing]
 
 = Details =
 
@@ -77,10 +77,13 @@ Result:  INGREDIENTS: Unbleached enriched flour (thiamin mononitrate, riboflavin
 
 1. Download several picture form internet to test. it return result some in:
 
-# QR code
-# EAN 13
-# Data matrix
-# PDF 47
+* QR code
+
+* EAN 13
+
+* Data matrix
+
+* PDF 47
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
