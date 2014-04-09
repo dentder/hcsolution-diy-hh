@@ -69,7 +69,12 @@ https://www.python.org/download/releases/2.7.6/
 11. add python folder c:\python27 to windows environment PATH parameter
 
 {{{
-http://www.java.com/en/download/help/path.xml
+Windows 7
+Select Computer from the Start menu
+Choose System Properties from the context menu
+Click Advanced system settings > Advanced tab
+Click on Environment Variables, under System Variables, find PATH, and click on it.
+In the Edit windows, modify PATH by adding the location of the class to the value for PATH. If you do not have the item PATH, you may select to add a new variable and add PATH as the name and the location of the class as the value.
 }}}
 
 12. Install jave again
