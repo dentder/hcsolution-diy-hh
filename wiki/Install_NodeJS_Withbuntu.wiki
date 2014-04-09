@@ -24,6 +24,44 @@ sudo make install
 {{{
 npm install java
 }}}
+*fail: can not find java folder*
+
+4. Check if you have Java installed on your system. To do this, you will have to run the Java version command from terminal.
+Open up a terminal and enter the following command:
+
+{{{
+java -version
+}}}
+
+If you have OpenJDK installed on your system it may look like this:
+
+{{{
+java version "1.7.0_15"
+OpenJDK Runtime Environment (IcedTea6 1.10pre) (7b15~pre1-0lucid1)
+OpenJDK 64-Bit Server VM (build 19.0-b09, mixed mode)
+}}}
+
+if don't have. install java.
+
+5. find java folder:
+{{{
+ sudo find /usr/ -name *jdk
+}}}
+
+turn out:
+
+{{{
+/usr/lib/jvm/java-1.6.0-openjdk
+/usr/lib/jvm/java-6-openjdk
+
+}}}
+6. set java folder:
+{{{
+export JAVA_HOME=/usr/lib/jvm/java-1.6.0-openjdk
+}}}
+
+try again.
+*fail*
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
