@@ -60,9 +60,10 @@ http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.h
 }}}
 
 9.Install Endine
-10. install python
+
+10. install python 2.7.6
 {{{
-https://www.python.org/download/releases/3.1/
+https://www.python.org/download/releases/2.7.6/
 }}}
 ---
 Add your content here.  Format your content with:
