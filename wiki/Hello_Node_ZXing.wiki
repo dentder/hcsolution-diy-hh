@@ -1,0 +1,39 @@
+#summary first hello world with node-zxing by nodejs
+
+= Introduction =
+to create first code to use node-zxing to read barcode
+= Details =
+
+=== Environment: ===
+
+ * Ubuntu
+ * java
+{{{
+hai@hai-Inspiron-1545:~/Galileo/hcsolution-diy-hh/V3_Galileo/Code/NodeJS$ java -version
+java version "1.6.0_27"
+OpenJDK Runtime Environment (IcedTea6 1.12.6) (6b27-1.12.6-1ubuntu0.12.04.2)
+OpenJDK Server VM (build 20.0-b12, mixed mode)
+}}}
+
+ * NodeJS
+ * NodeJS modules
+
+{{{
+hai@hai-Inspiron-1545:~/Galileo/hcsolution-diy-hh/V3_Galileo/Code/NodeJS$ npm ls/home/hai/Galileo/hcsolution-diy-hh/V3_Galileo/Code/NodeJS
+└── node-zxing@0.0.1
+
+}}}
+
+* Zxing java library
+
+=== Code ===
+
+{{{
+
+}}}
+
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
