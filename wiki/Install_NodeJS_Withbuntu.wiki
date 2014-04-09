@@ -2,7 +2,8 @@
 
 = Introduction =
 
-Add your content here.
+after try a lot of time to install node package to windows. really hard.
+I switch to install node on ubuntu to install java package.
 
 
 = Details =
@@ -15,6 +16,13 @@ cd node
 ./configure
 make
 sudo make install
+}}}
+
+*successful*
+
+3. install java package
+{{{
+npm install java
 }}}
 
 Add your content here.  Format your content with:
