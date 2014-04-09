@@ -2,6 +2,9 @@
 
 = Introduction =
 to create first code to use node-zxing to read barcode
+
+[http://eem.bime.ntu.edu.tw/resource/clchuang/Clanton_Full_SDK_OpenJDK6.7z]
+
 = Details =
 
 === Environment: ===
