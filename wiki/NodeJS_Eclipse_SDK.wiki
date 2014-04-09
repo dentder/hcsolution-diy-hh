@@ -65,6 +65,26 @@ http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.h
 {{{
 https://www.python.org/download/releases/2.7.6/
 }}}
+
+11. add python folder c:\python27 to windows environment PATH parameter
+
+{{{
+http://www.java.com/en/download/help/path.xml
+}}}
+
+12. Install jave again
+{{{
+npm install java
+}}}
+
+--> fail
+
+13. Windows SDK for Windows Server 2008 and .NET Framework 3.5
+{{{
+http://www.microsoft.com/en-us/download/details.aspx?id=11310
+}}}
+
+do not install Documentation and Sample, it take more 2GB and 5 hours for download. 
 ---
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
