@@ -1,4 +1,5 @@
-#summary Connecting Galileo to a Camera - Melvin Juban
+#summary Connecting Galileo to a Camera - mmjuban
+#labels Featured
 
 = What We Know =
 
