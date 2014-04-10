@@ -65,7 +65,7 @@
         I tried running gphoto2 but the command is not found. Obviously this was not installed in the stock Yocto Linux image 0.7.5
         === Need to ask for help if someone has an image with gphoto2 installed or learn to do it myself!!! ===
 == Compiling gphoto2 into the linux image ==
- # i replaced the 0.7.5 linux image with one that has compiling capability
+ # i replaced the 0.7.5 linux image with one that has compiling capability https://communities.intel.com/message/228273
  # downloaded the source code for libgphoto2 and gphoto2
  # copied the source code into the image
  # tried to `./configure` and got this error message:
