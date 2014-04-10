@@ -98,6 +98,29 @@ sudo apt-get install sed wget cvs subversion git-core coreutils unzip texi2html 
 
 }}}
 
+---
+
+Continues to work on it on 10/04/2014
+
+1. Copy Board support package to another partion.
+
+{{{
+hai@hai-Inspiron-1545:~$ cp Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z /media/TEST/
+}}}
+
+2. Uncompressed
+
+{{{ 
+7z x Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z 
+ }}}
+
+3. Rename your BSP folder with a shorter name
+
+{{{ 
+mv Board_Support_Package_Sources_for_Intel_Quark_v0.7.5 BSPGLL
+}}}
+
+4. follow step 5,6 in the up
 --- end of report ---
 ------------------------------------------------------
 Add your content here.  Format your content with:
