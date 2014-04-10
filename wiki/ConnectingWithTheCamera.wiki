@@ -15,13 +15,13 @@
 
 = What I've accomplished so far =
 
-    Creating the Linux image
+   == Creating the Linux image ==
         Downloaded LINUX_IMAGE_FOR_SD_Intel_Galileo_v0.7.5.7z from: https://downloadcenter.intel.com/Detail_Desc.aspx?agr=Y&DwnldID=23171
         Extracted image to 4GB microSD card
         Didn't work!!!
         followed instructions to create boot partition (see Image 1 on sidebar)
         Then it booted up from the microSD card (take a while) and the Blink sketch was retained after reboot!
-    Problems with unable to upload Sketches
+   == Problems with unable to upload Sketches ==
         There seems to be a bug with Arduino 1.5.3 and the Yocto 0.7.5 image that causes  it to hang. Found the procedure to recover from here: https://communities.intel.com/thread/48975?start=0&tstart=0 
              IDE hangs on:
                 echo "Deleting existing sketch on target" $fixed_path/lsz.exe --escape -c "mv -f /sketch/sketch.elf /sketch/sketch.elf.old" <> $tty_port_id 1>&0
@@ -29,7 +29,7 @@
                 Exiting the Arduino IDE
                 Killing the lsz.exe process
                 Rebooting the Galileo (unplug power)
-    Establishing communications with the Linux partition
+   == Establishing communications with the Linux partition ==
         use Poor Man's Telnet sketch from here: https://communities.intel.com/thread/48654?start=0&tstart=0
             upload sketch
             open up Serial Monitor
@@ -54,12 +54,12 @@
                     Setting static ip worked on my home network:
                         system("ifconfig eth0 192.168.11.88 netmask 255.255.255.0 up");
                 Select telnet in putty and type in the ipaddress and I was able to get full access to the Linux commandline interface!
-                *Now to get this to work in the office using the work laptop... the saga continues*
-    Establishing connection with the camera though USB
+               === Now to get this to work in the office using the work laptop... the saga continues ===
+   == Establishing connection with the camera though USB ==
         Although my research on the Internet and actually checking the USB descriptors indicate that this camera indeed uses PTP and not the USB Mass Storage protocol I still had to try...
-        1st was to learn to mount a Flash drive to establish a frame of reference
+        First was to learn to mount a Flash drive to establish a frame of reference
             Using a USB-to-go cable I bought for my Android phone, I connected my 32GB Sandisk Cruzer flash thumb drive and the kernel recognized it as a USB Mass Storage device in /dev/sda1 by checking the kernel log via the dmesg Linux command (or lsusb)
             I was able to mount it to a directory I created called /flashdrive using mount /dev/sda1 /flashdrive https://www.suse.com/communities/conversations/manually-mounting-a-usb-flash-drive-in-linux/
         I tried plugging-in the Nikon Coolpix P300 but, as expected, it was not recognized as a USB Mass Storage Device. I tried with 3 other cameras, 2 Canon and 1 Olympus, lying around in the house hoping one of them might work. Unfortunately, all of them use PTP
         I tried running gphoto2 but the command is not found. Obviously this was not installed in the stock Yocto Linux image 0.7.5
-        *Need to ask for help if someone has an image with gphoto2 installed or learn to do it myself!!!*
+        === Need to ask for help if someone has an image with gphoto2 installed or learn to do it myself!!! ===
