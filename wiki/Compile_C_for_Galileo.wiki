@@ -50,10 +50,15 @@ hai@hai-Inspiron-1545:~/BSPGLL$ tar -xvzf meta-clanton_v0.7.5.tar.gz
 }}}
 
 6. set up poky
-
+Go to the new Yocto home folder
 {{{
-source poky/oe-init-build-env yocto_build
+cd meta-clanton_...
+}}}
 
+Download, compile and set up Poky, a tool used by Yocto
+{{{
+./setup.sh
+source poky/oe-init-build-env yocto_build
 }}}
 
 7. copy the full image configuration from a sample:
