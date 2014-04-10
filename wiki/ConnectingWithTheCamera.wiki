@@ -63,3 +63,24 @@
         I tried plugging-in the Nikon Coolpix P300 but, as expected, it was not recognized as a USB Mass Storage Device. I tried with 3 other cameras, 2 Canon and 1 Olympus, lying around in the house hoping one of them might work. Unfortunately, all of them use PTP
         I tried running gphoto2 but the command is not found. Obviously this was not installed in the stock Yocto Linux image 0.7.5
         === Need to ask for help if someone has an image with gphoto2 installed or learn to do it myself!!! ===
+== Compiling gphoto2 into the linux image ==
+ # i replaced the 0.7.5 linux image with one that has compiling capability
+ # downloaded the source code for libgphoto2 and gphoto2
+ # copied the source code into the image
+ # tried to `./configure` and got this error message:
+{{{
+root@clanton:/media/mmcblk0p1/libgphoto2-2.5.4# ./configure
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... configure: error: newly created file is older than distributed files!
+Check your system clock
+}}}
+ # seems like the system clock is not set correctly... after some quick research this is expected since we dont have a battery installed to retain a "real" clock.
+ # tried running `ntpupdate pool.ntp.org` but got this:
+{{{
+root@clanton:/media/mmcblk0p1/libgphoto2-2.5.4# ntpdate pool.ntp.org
+Error resolving pool.ntp.org: Name or service not known (-2)
+11 Mar 23:09:54 ntpdate[1679]: Can't find host pool.ntp.org: Name or service not known (-2)
+11 Mar 23:09:54 ntpdate[1679]: no servers can be used, exiting
+}}}
+ # set the date using `date -s "10 APR 2014 18:46:00"`
+ # tried `./configure` again
