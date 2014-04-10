@@ -83,4 +83,60 @@ Error resolving pool.ntp.org: Name or service not known (-2)
 11 Mar 23:09:54 ntpdate[1679]: no servers can be used, exiting
 }}}
  # set the date using `date -s "10 APR 2014 18:46:00"`
- # tried `./configure` again
+ # tried `./configure` again and got to here:
+{{{
+checking ltdl.h usability... no
+checking ltdl.h presence... no
+checking for ltdl.h... no
+checking that we can compile and link with libltdl... no
+configure: error: cannot compile and link against libltdl
+libgphoto2 requires libltdl (the libtool dl* library),
+but cannot compile and link against it.
+}}}
+ # downloaded `libtools` from http://ossm.utm.my/gnu/libtool/libtool-2.4.2.tar.gz
+ # copied to SD card
+ # run `./configure` no errors!
+ # run `make`
+ # run `make install`
+ # now back to libgphoto2
+ # run `date -s "10 APR 2014 18:46:00"`
+ # run `./configure`, `make`, and `make install`
+   errors at the end of make install:
+{{{
+make[1]: Entering directory `/media/mmcblk0p1/libgphoto2-2.5.4'
+make[2]: Entering directory `/media/mmcblk0p1/libgphoto2-2.5.4'
+ /bin/mkdir -p '/usr/local/bin'
+ /usr/bin/install -c gphoto2-config '/usr/local/bin'
+rm -f /usr/local/include/gphoto2/gphoto2
+rm: cannot remove '/usr/local/include/gphoto2/gphoto2': Is a directory
+make[2]: *** [install-data-local] Error 1
+make[2]: Leaving directory `/media/mmcblk0p1/libgphoto2-2.5.4'
+make[1]: *** [install-am] Error 2
+make[1]: Leaving directory `/media/mmcblk0p1/libgphoto2-2.5.4'
+make: *** [install-recursive] Error 1
+}}}
+ # now onto `gphoto2`
+ # run `./configure`, `make`, and `make install`
+   error during ./configure
+{{{
+checking popt.h usability... no
+checking popt.h presence... no
+checking for popt.h... no
+checking popt.h usability... no
+checking popt.h presence... no
+checking for popt.h... no
+configure: error: 
+* Cannot autodetect popt.h
+*
+* Set POPT_CFLAGS and POPT_LIBS correctly.
+}}}
+    download and install popt from http://www.linuxfromscratch.org/blfs/view/svn/general/popt.html
+    ./configure --prefix=/usr --disable-static >log_configure.txt
+    make >log_make.txt
+    make install >log_makeinstall.txt
+ # errors at make and make install
+ # === I STOPPED HERE ===
+ # rerun `./configure` for gphoto2
+ # run `make` & `make install`
+ # test gphoto2 by running `gphoto2 -v`
+ # run `gphoto2 --auto-detect`
