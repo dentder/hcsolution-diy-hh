@@ -96,6 +96,17 @@ root@clanton:~#
 
 
 * It takes around 30 second to decode *
+
+{{{
+root@clanton:~# node hellozxing.js 
+null 'file:/home/root/a.jpg (format: QR_CODE, type: URI):\nRaw result:\nwww.worldbarcodes.com\nParsed result:\nhttp://www.worldbarcodes.com\n' ''
+Zxing hello world. Hoang Hai
+Error:  null
+Result:  www.worldbarcodes.com
+
+}}}
+
+
 5. *Successfully.*
 ---
 Add your content here.  Format your content with:
