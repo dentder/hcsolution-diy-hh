@@ -94,6 +94,8 @@ root@clanton:~#
 
 }}}
 
+
+* It takes around 30 second to decode *
 5. *Successfully.*
 ---
 Add your content here.  Format your content with:
