@@ -1,4 +1,4 @@
-#summary Generate a simple page by NodeJS run on Galileo
+#summary Generate a simple Hello page by NodeJS run on Galileo
 
 = Introduction =
 
