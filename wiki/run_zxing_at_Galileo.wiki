@@ -1,0 +1,102 @@
+#summary First run zxing at Galileo
+
+= Introduction =
+
+First run zxing at Galileo.
+assumption: has the Open JDK image on your clanton.
+
+
+= Details =
+
+1. Change your board time to current time so that you can install node-zxing on your Galileo
+
+2. Install node-zing
+
+{{{
+root@clanton:~# date -s "13 APR 2014 11:13:00"
+Sun Apr 13 11:13:00 UTC 2014
+root@clanton:~# npm install node-zxing
+npm http GET https://registry.npmjs.org/node-zxing
+npm http 200 https://registry.npmjs.org/node-zxing
+npm http GET https://registry.npmjs.org/node-zxing/-/node-zxing-0.0.1.tgz
+npm http 200 https://registry.npmjs.org/node-zxing/-/node-zxing-0.0.1.tgz
+node-zxing@0.0.1 node_modules/node-zxing
+}}}
+
+3. Copy code to Galileo use *sftp*
+
+
+{{{
+hai@hai-Inspiron-1545:~/Galileo/hcsolution-diy-hh/V3_Galileo/Code/NodeJS$ sftp root@192.168.0.103
+Connected to 192.168.0.103.
+sftp> put hello.js
+Uploading hello.js to /home/root/hello.js
+hello.js                                                                                                      100%  265     0.3KB/s   00:00    
+sftp> put hellozxing.js
+Uploading hellozxing.js to /home/root/hellozxing.js
+hellozxing.js                                                                                                 100%  267     0.3KB/s   00:00    
+sftp> put zxinglib/
+Uploading zxinglib/ to /home/root/zxinglib
+zxinglib/ is not a regular file
+sftp> put zxinglib
+Uploading zxinglib/ to /home/root/zxinglib
+zxinglib/ is not a regular file
+sftp> put zxinglib/*.*
+stat zxinglib/*.*: No such file or directory
+sftp> ls
+apache-tomcat-7.0.47        apache-tomcat-7.0.47-embed  hello.js                    hellozxing.js               lib.tar.gz                  
+node_modules                openjdk.tar.gz              tmp                         tomcat-7-full.tar.gz        tomcat-7.tar.gz             
+sftp> put zxinglib/javase/javase.jar 
+Uploading zxinglib/javase/javase.jar to /home/root/javase.jar
+zxinglib/javase/javase.jar                                                                                    100%   14KB  14.5KB/s   00:00    
+sftp> put zxinglib/core/core.jar 
+Uploading zxinglib/core/core.jar to /home/root/core.jar
+zxinglib/core/core.jar                                                                                        100%  263KB 263.1KB/s   00:01    
+sftp> put a.jpg 
+Uploading a.jpg to /home/root/a.jpg
+a.jpg                                                                                                         100%   10KB  10.0KB/s   00:00    
+sftp> put b.gif 
+Uploading b.gif to /home/root/b.gif
+b.gif                                                                                                         100% 3272     3.2KB/s   00:00    
+sftp> put c.png 
+Uploading c.png to /home/root/c.png
+c.png                                                                                                         100%  581     0.6KB/s   00:00    
+sftp> ls
+a.jpg                       apache-tomcat-7.0.47        apache-tomcat-7.0.47-embed  b.gif                       c.png                       
+core.jar                    hello.js                    hellozxing.js               javase.jar                  lib.tar.gz                  
+node_modules                openjdk.tar.gz              tmp                         tomcat-7-full.tar.gz        tomcat-7.tar.gz             
+sftp> mdir 
+Invalid command.
+sftp> mkdir zxinglib
+sftp> mkdir zxinglib/javase
+sftp> mkdir zxinglib/core
+sftp> put zxinglib/javase/javase.jar  zxinglib/javase/
+Uploading zxinglib/javase/javase.jar to /home/root/zxinglib/javase/javase.jar
+zxinglib/javase/javase.jar              
+}}}
+
+4. test hello.js and hellozxing.js
+
+{{{
+root@clanton:~# node hello.js 
+Server running at http://192.168.0.113:1337/
+^Croot@clanton:~# ^C
+root@clanton:~# ls
+a.jpg			    b.gif     hello.js	     lib.tar.gz      pdf417ex01.jpg	   tomcat-7.tar.gz
+apache-tomcat-7.0.47	    c.png     hellozxing.js  node_modules    tmp		   zxinglib
+apache-tomcat-7.0.47-embed  core.jar  javase.jar     openjdk.tar.gz  tomcat-7-full.tar.gz
+root@clanton:~# node hellozxing.js 
+null 'file:/home/root/pdf417ex01.jpg (format: PDF417, type: TEXT):\nRaw result:\nINGREDIENTS: Unbleached enriched flour (thiamin mononitrate, riboflavin, \r\nniacin, ruduced iron), water, glucose-fructose or sugar, yeast, vegetable oil\r\nshortening, salt, defatted soya flour, calcium sulphate, amomonium chloride, \r\ncalcium propionate, sodium stearoyl-CQlactylate.\r\n\nParsed result:\nINGREDIENTS: Unbleached enriched flour (thiamin mononitrate, riboflavin, \r\nniacin, ruduced iron), water, glucose-fructose or sugar, yeast, vegetable oil\r\nshortening, salt, defatted soya flour, calcium sulphate, amomonium chloride, \r\ncalcium propionate, sodium stearoyl-CQlactylate.\r\n\n' ''
+Zxing hello world. Hoang Hai
+Error:  null
+Result:  INGREDIENTS: Unbleached enriched flour (thiamin mononitrate, riboflavin, 
+root@clanton:~# 
+
+}}}
+
+5. *Successfully.*
+---
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
