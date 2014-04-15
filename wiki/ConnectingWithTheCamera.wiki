@@ -201,11 +201,32 @@ POPT_CFLAGS=-I/usr/local/include
 POPT_LIBS="-L/usr/local/lib -lpopt"
 }}}
  # run `./configure --prefix=/usr/local`
- # error
+ # finally got past popt.h but still error at 
+{{{
+checking whether popt is required... yes                            
+checking popt.h usability... yes                                      
+checking popt.h presence... yes                             
+checking for popt.h... yes                                                     
+checking for poptStuffArgs in -lpopt... no                       
+checking for poptStuffArgs in -lpopt... no                                  
+checking for poptStuffArgs in -lpopt... no                           
+checking for poptStuffArgs in -lpopt... no                   
+checking for poptStuffArgs in -lpopt... no               
+checking for poptStuffArgs in -lpopt... no
+configure: error: 
+* Cannot autodetect library directory containing popt
+*
+* Set POPT_CFLAGS and POPT_LIBS correctly.
+}}}
+ # did some more searching and now I try passing the flags into the configure by running `./configure POPT_CFLAGS=-I/usr/local/include POPT_LIBS="-L/usr/local/lib -lpopt"`
 {{{
 root@clanton:/media/mmcblk0p1/gphoto2-2.5.4# ./configure POPT_CFLAGS=-I/usr/local/include POPT_LIBS="-L/usr/local/lib -lpopt" >log_configure5.txt
 ./configure: line 14460: test: : integer expression expected
 config.status: WARNING:  'po/Makefile.in.in' seems to ignore the --datarootdir setting
+}}}
+ # oh yeah! configure succeeded! now let's `make'!
+ # but still an error:
+{{{
 root@clanton:/media/mmcblk0p1/gphoto2-2.5.4# make >log_make.txt
 In file included from actions.c:39:0:
 actions.h:24:36: fatal error: gphoto2/gphoto2-camera.h: No such file or directory
