@@ -8,6 +8,7 @@ Find the lib can decode datamatrix
 = Details =
 
 [http://boy.co.ua/decode.php?lang=EN.]
+[http://www.libdmtx.org/]
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
