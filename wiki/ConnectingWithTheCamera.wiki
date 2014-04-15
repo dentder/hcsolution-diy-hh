@@ -180,8 +180,51 @@ configure: error:
     make >log_make.txt
     make install >log_makeinstall.txt
  # errors at make and make install
- # === I STOPPED HERE ===
+ # trying popt-1.14 pre-compiled for Quark from Nicolas
+ # run `./configure`, and `make install` (no need to run `make`)
+ # some warnings due to date set incorrect
+ # set the date using `date -s "15 APR 2014 18:46:00"`
+ # re-run `make install`, no more warnings!
+ # === waiting... ===
  # rerun `./configure` for gphoto2
+ # still problem autodetecting popt
+{{{
+root@clanton:/media/mmcblk0p1/gphoto2-2.5.4# ./configure >log_configure2.txt./configure: line 14460: test: : integer expression expected
+configure: error: 
+* Cannot autodetect library directory containing popt
+*
+* Set POPT_CFLAGS and POPT_LIBS correctly.
+}}}
+ # run:
+{{{
+POPT_CFLAGS=-I/usr/local/include
+POPT_LIBS="-L/usr/local/lib -lpopt"
+}}}
+ # run `./configure --prefix=/usr/local`
+ # error
+{{{
+root@clanton:/media/mmcblk0p1/gphoto2-2.5.4# ./configure POPT_CFLAGS=-I/usr/local/include POPT_LIBS="-L/usr/local/lib -lpopt" >log_configure5.txt
+./configure: line 14460: test: : integer expression expected
+config.status: WARNING:  'po/Makefile.in.in' seems to ignore the --datarootdir setting
+root@clanton:/media/mmcblk0p1/gphoto2-2.5.4# make >log_make.txt
+In file included from actions.c:39:0:
+actions.h:24:36: fatal error: gphoto2/gphoto2-camera.h: No such file or directory
+}}}
+ # upon checking, `gphoto2/gphoto2-camera.h` is actually inside libgphoto2, not gphoto. how do i point the compile to grab gphoto2-camera.h from the libphoto directory while I am in the gphoto directory performing the `make`?
+{{{
+root@clanton:/media/mmcblk0p1/libgphoto2-2.5.4/gphoto2# ls
+gphoto2-abilities-list.h  gphoto2-filesys.h  gphoto2-setting.h
+gphoto2-camera.h	  gphoto2-library.h  gphoto2-version.h
+gphoto2-context.h	  gphoto2-list.h     gphoto2-widget.h
+gphoto2-file.h		  gphoto2-result.h   gphoto2.h
+
+root@clanton:/media/mmcblk0p1# ls
+PaxHeaders.1163  core-image-minimal-initramfs-clanton.cpio.gz  libtool-2.4.2
+README.txt	 gphoto2-2.5.4				       melvin
+boot		 image-full-clanton.ext3		       popt-1.14
+bzImage		 libgphoto2-2.5.4			       popt-1.16-fail
+}}}
+ # === I STOPPED HERE, ARRRGHHH!!! ===
  # run `make` & `make install`
  # test gphoto2 by running `gphoto2 -v`
  # run `gphoto2 --auto-detect`
