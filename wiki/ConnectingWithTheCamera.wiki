@@ -185,3 +185,37 @@ configure: error:
  # run `make` & `make install`
  # test gphoto2 by running `gphoto2 -v`
  # run `gphoto2 --auto-detect`
+
+HELP:
+Hi Melvin,
+
+To have a more stable linux, my advice would be to compile your packages for the full Clanton image (as described here: http://www.malinov.com/Home/sergey-s-blog/intelgalileo-buildinglinuximage and also available on Intel Software Academic program http://intel-software-academic-program.com/pages/courses#diy).
+
+I’m sending you compiled-for-Quark and ready-to-install archives of popt.
+
+So, the procedure I suggest you to install it is:
+-	Use the full clanton image and copy archives on the SD card too
+-	Connect with SSH over Ethernet (Wifi is also available with some adaptors)
+-	Extract files from archives (in /media/mmcblk0p1/)
+-	(./configure : not sure you need to run this one, I usually do it, even if it takes some time…)
+-	(no make, already done it)
+-	make install
+
+It takes some time and works on Galileo (I mean installation sounds to be successful, you should test with your camera).
+I also did it with libgphoto2 and it ends fine (but the archive is too heavy to be sent).
+
+If you want to compile this lib, you need, either the cross compile toolchain (see malinov.com) or to mount the full clanton image onto  your Ubuntu file system.
+Sudo mount –o loop –t ext3 image-clanton-full.ext3 /mnt
+Copy your source files to /home/root, then
+Sudo Chroot /mnt
+Then, configure, make, make install.
+
+Hope this help,
+Nicolas
+
+PS: Extra stuff
+
+I’ve created a Debian (i386)  image based on this tutorial http://wiki.ros.org/IntelGalileo/Debian (take a look only if you want to keep on this track, they explain how to install any packages you want while generating the image).
+However, we figured out that some packages (eg ffmpeg) don’t work, as Quark instructions set and i386 instructions set are different.
+An ‘illegal instruction’ issue would appear randomly when starting or running a program.
+Moreover, it has not node.js which is not convenient for you. The image is available here: http://intel-software-academic-program.com/pages/courses#diy
