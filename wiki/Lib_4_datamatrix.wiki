@@ -5,6 +5,7 @@
 Find the lib can decode datamatrix
 
 successfully install in ubuntu
+successfully install in galileo
 
 = Details =
 
@@ -58,6 +59,8 @@ picture full Intel Quack --> fail, waiting for more than 5 minutes does not retu
 
 picture with only data matrix code 16kb --> return result in around 7s.
 
+
+---
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
