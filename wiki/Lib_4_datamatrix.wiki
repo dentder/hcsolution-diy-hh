@@ -25,6 +25,18 @@ pip install PIL
 }}}
 
 
+---
+install on Galileo.
+
+1. install libdmtx
+
+2. install dmtx-wrapprer for python
+
+3. install PIL for python by this source code
+
+[http://effbot.org/downloads/Imaging-1.1.7.tar.gz]
+
+
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
