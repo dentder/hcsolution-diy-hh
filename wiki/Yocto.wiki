@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary all thing to use yocto as OS
 
 = Introduction =
 
@@ -6,6 +6,11 @@ Add your content here.
 
 [https://community.freescale.com/docs/DOC-94849]
 
+list of packages in yocto
+
+[http://packages.yoctoproject.org/]
+
+install packgaes
 = Details =
 
 Add your content here.  Format your content with:
