@@ -4,6 +4,7 @@
 
 Find the lib can decode datamatrix
 
+successfully install in ubuntu
 
 = Details =
 
@@ -13,6 +14,9 @@ Find the lib can decode datamatrix
 
 [http://libdmtx.wikidot.com/libdmtx-python-wrapper]
 
+1. install libdmtx
+2. install dmtx-wrapper
+3. use pythong
 
 
 Add your content here.  Format your content with:
