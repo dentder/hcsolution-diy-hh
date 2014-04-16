@@ -15,8 +15,14 @@ successfully install in ubuntu
 [http://libdmtx.wikidot.com/libdmtx-python-wrapper]
 
 1. install libdmtx
+
 2. install dmtx-wrapper
-3. use pythong
+
+3. use python
+
+{{{
+pip install PIL
+}}}
 
 
 Add your content here.  Format your content with:
