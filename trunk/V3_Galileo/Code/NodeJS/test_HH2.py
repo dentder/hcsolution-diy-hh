@@ -4,7 +4,7 @@ from PIL import Image
 print "Reading file..."
 # Read a Data Matrix barcode
 dm_read = DataMatrix()
-img = Image.open("clantont2.jpg")
+img = Image.open("Cropped1.jpg")
 
 print dm_read.decode(img.size[0], img.size[1], buffer(img.tostring()))
 print dm_read.count()
