@@ -8,10 +8,12 @@
 ###################################################################################
 from PIL import Image
 from pydmtx import DataMatrix
+import os
+#import PIL.ImageOps # use for invertcolor
 
 strfi="VLV_27_27_recipe.txt"
 strfo="result.csv"
-strfImage = "PN4Mb.jpg"
+strfImage = "IMG_4581.JPG"
 fRecipe = open(strfi, 'r') # open Recipe file for read
 fResult = open(strfo, 'w') # open Result file for write
 imgMaster = Image.open(strfImage) #open Image
@@ -36,7 +38,7 @@ fResult.write("Col" + str(iCol) + "\n")
 line = fRecipe.readline()
 iCount = 1
 iCount2 = 1
-while line:
+while iCount2<(iTotalUnit+1):
     
 
     values = line.split()
@@ -47,9 +49,12 @@ while line:
     box = (wposition, hposition, wposition+wRef, hposition+hRef)
     print box
     imgRegion = imgMaster.crop(box)
-    dm_read = DataMatrix()
+    #inverted_image = PIL.ImageOps.invert(image)
+    #imgRegion = PIL.ImageOps.invert(imgRegion) #invert color
+    dm_read = DataMatrix(max_count = 1, timeout = 150) 
+        # simply setting timeout to a certain number of milliseconds, we restrict the total detection time per image.
     strResult = dm_read.decode(imgRegion.size[0], imgRegion.size[1], buffer(imgRegion.tostring()))
-    #imgRegion.save("Cropped" + str(iCount2) + ".jpg") 
+    imgRegion.save("Cropped" + str(iCount2) + ".jpg") #save file
     #box.kill()
     #dm_read.kill()    
     #imgRegion.kill()
@@ -71,6 +76,7 @@ while line:
     iCount +=1
     iCount2 +=1    
 
+#os.remove(strfImage) # Delete file
 fRecipe.close() #close recipe file
 fResult.close() #close Result file
 
