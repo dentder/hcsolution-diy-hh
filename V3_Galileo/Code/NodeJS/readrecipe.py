@@ -4,7 +4,9 @@
 # Input: Recipe File, Image
 # Output: result file
 # Process: decode all pre-define boxes of image, and put on Result file
-# Version: 1.0 Date: 10:03PM 18-04-2014
+# Version: 1.0 Date: 10:03PM 18-04-2014 - intial version
+# Version: 1.01 Date: 21:20PM 07-05-2014
+# add timeout control for image processing
 ###################################################################################
 from PIL import Image
 from pydmtx import DataMatrix
