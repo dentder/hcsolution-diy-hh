@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='IE=10')    
+    link(rel='stylesheet', href='stylesheets/pure-min.css')
+    link(rel='stylesheet', href='stylesheets/icon.css')
+    link(rel='stylesheet', href='stylesheets/master.css')
+    link(rel='stylesheet', href='stylesheets/site.css')
+    script(src='js/jquery-1.10.1.js')
+   
+       HEADER 
+    header.pure-g-r.intel-hdr
+      .intel-u-1-2.intel-desktop
+        .intel-hdr-subtitle VNAT Galileo WW23'2014 - MDO HVE VN Team
+        .intel-hdr-title Mini Demix Module for Internal Applications
+      .intel-u-1-2.intel-right.intel-desktop
+        .intel-hdr-infobar            
+        img.intel-hdr-logo(alt='Intel Logo', src='images/intellogo.png')      
+    #layout.pure-g-r
+      
+         CONTENT 
+      #content.pure-u-1.intel-content
+                 
+        .pure-u-1.intel-box
+          h2(align='center') Instruction
+          hr
+          .intel-indent
+            | Put the tray of 6 units on the pre-define location on camera stand. Turn the camera on.
+            | Use the Button below to take a picture of 6 unit.  
+            | Please wait for around 40 second and see the result on the table below
+          hr
+          div(align='center')  
+           a.intel-btn.intel-btn-action(href='/upload') Input VID list
+           a.intel-btn.intel-btn-action(href='/checkcamera') Check camera readiness
+           a.intel-btn.intel-btn-action(href='/takepicture') Take the Picture 
+          br
+          hr        
+          block content
+      //
+         FOOTER 
+      .pure-g.intel-footer
+        .pure-u-1.intel-center
+          | Mini Demix Module - MDO VN HVE Team
