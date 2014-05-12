@@ -6,7 +6,7 @@ var express = require('express') // us
   , stylus = require('stylus')
   , nib = require('nib')
 
-  var sys = require('sys')
+  //var sys = require('sys')
   var exec = require('child_process').exec;
   var child;
   var fs = require('fs');
@@ -74,33 +74,81 @@ app.post('/upload', function(req, res) {
   )
 });
 
-
+//-----------------------------------------------------
 app.get('/checkcamera', function (req, res) {
-  console.log("Checking camera readiness")
-  res.render('message',
-  { message: 'Testing message..' }  
-  )
+  console.log("Checking camera readiness: gphoto2 --auto-detect")
+//gphoto2 --auto-detect
+
+   child = exec("gphoto2 --auto-detect", function (error, stdout, stderr) {
+	//  sys.print('stdout: ' + stdout);
+	//  sys.print('stderr: ' + stderr);
+            console.log('stdout: ' + stdout);
+            console.log('stderr: ' + stderr);
+
+	  if (error !== null) 
+          {
+	    console.log('exec error: ' + error);
+            res.render('message',
+  		{ message: 'ERROR EXEC | checking camera | ' + error }  
+  		    )
+	  }   
+	  else
+	  {
+  		res.render('message',
+  		{ message: 'SUCESSFUL EXEC|checking camera | ' + stdout }  
+  		)
+          }
+          })
   })
-  
+//-----------------------------------------------------
 app.get('/takepicture', function (req, res) {
-  console.log("taking picture")
+  console.log("taking camera picture")
+  //gphoto2 --auto-detect
+
+   child = exec("gphoto2 --capture-image-and-download", function (error, stdout, stderr) {
+	//  sys.print('stdout: ' + stdout);
+	//  sys.print('stderr: ' + stderr);
+            console.log('stdout: ' + stdout);
+            console.log('stderr: ' + stderr);
+
+	  if (error !== null) 
+          {
+	    console.log('exec error: ' + error);
+            res.render('message',
+  		{ message: 'ERROR EXEC | taking camera |' + error }  
+  		    )
+	  }   
+	  else
+	  {
+  		res.render('message',
+  		{ message: 'SUCESSFUL EXEC |taking camera | ' + stdout }  
+  		)
+          }
+          })
+  })
+//-----------------------------------------------------  
+app.get('/processpicture', function (req, res) {
+       console.log("Processing picture")
         //  excutes taking picture
 
-
+      // res.render('message',
+  	//	{ message: 'Status of image taking....DONE' }   )
 	// executes image processing
 	child = exec("python readrecipe.py", function (error, stdout, stderr) {
-	  sys.print('stdout: ' + stdout);
-	  sys.print('stderr: ' + stderr);
+	//  sys.print('stdout: ' + stdout);
+	//  sys.print('stderr: ' + stderr);
+            console.log('stdout: ' + stdout);
+            console.log('stderr: ' + stderr);
+
 	  if (error !== null) 
           {
 	    console.log('exec error: ' + error);
             res.render('message',
   		{ message: 'Status of image processing: exec error: ' + error }  
   		    )
-	  }
-          res.render('message',
-  		{ message: 'Status of image processing: ' + stdout }  
-  		    )
+	  }   
+    
+
 	})
 
   res.render('result2',

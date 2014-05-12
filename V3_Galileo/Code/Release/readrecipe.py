@@ -73,7 +73,7 @@ while iCount2<(iTotalUnit+1):
     imgRegion = imgMaster.crop(box)
     #inverted_image = PIL.ImageOps.invert(image)
     #imgRegion = PIL.ImageOps.invert(imgRegion) #invert color
-    dm_read = DataMatrix(max_count = 1, timeout = 150) 
+    dm_read = DataMatrix(max_count = 1, timeout = 400) 
         # simply setting timeout to a certain number of milliseconds, we restrict the total detection time per image.
     strResult = dm_read.decode(imgRegion.size[0], imgRegion.size[1], buffer(imgRegion.tostring()))
     #imgRegion.save("Cropped" + str(iCount2) + ".jpg") #save file
