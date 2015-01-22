@@ -6,7 +6,11 @@ Add your content here.
 {{{
 from pydmtx import DataMatrix
 dm_read = DataMatrix()
-res = dm_read.decode(img.size[0], img.size[1], buffer(img.tostring()))
+
+img = Image.open( f )
+if img.mode != 'RGB':
+   img = img.convert('RGB')
+print dm_read.decode( img.size[0], img.size[1], buffer(img.tostring()) )
 
 result = []
         i      = -1
