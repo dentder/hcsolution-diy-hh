@@ -28,6 +28,10 @@ result = []
                            'Quality':  10})
 }}}
 
+{{{
+   for count in range(2, dm_read.count()+1):
+                     stats = dm_read.stats(count)
+}}}
 = Details =
 
 Add your content here.  Format your content with:
