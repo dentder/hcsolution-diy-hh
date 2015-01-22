@@ -1,9 +1,13 @@
 #Code to get stats from libdmtx py wrapper
 
-= Introduction =
+= PY : LIBDMTX : Get stats from read =
 
 Add your content here.
 {{{
+from pydmtx import DataMatrix
+dm_read = DataMatrix()
+res = dm_read.decode(img.size[0], img.size[1], buffer(img.tostring()))
+
 result = []
         i      = -1
         for i in range(dm_read.count()):
