@@ -20,7 +20,7 @@ issue:
 
 Interacting with an SVN server, ubuntu prompts me for the password to a '(null)' keyring.
 
-'rm ~/.gnome2/keyrings/login.keyring
+`rm ~/.gnome2/keyrings/login.keyring`
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
