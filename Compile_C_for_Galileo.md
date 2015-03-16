@@ -1,0 +1,134 @@
+# Introduction #
+
+A cross compiler allows you to compile a code for Intel
+Quark SoC, on your computer, and then to move it to the
+Galileo board to execute it.
+
+Use the Linux Ubuntu 12,04
+Follow the documentation here:
+
+http://www.intel-software-academic-program.com/courses/diy/Intel_Academic_-_DIY_-_InternetOfThings/IntelAcademic_IoT_07_C-Cpp_Yocto.pdf
+
+
+# Details #
+
+1. Get package here
+
+```
+sudo apt-get install build-essential sed wget cvs
+subversion git-core coreutils unzip texi2html texinfo
+libsdl1.2-dev docbook-utils gawk python-pysqlite2 diffstat
+help2man make gcc g++ desktop-file-utils chrpath libgl1-
+mesa-dev libglu1-mesa-dev mercurial autoconf automake
+groff libtool xterm p7zip-full bitbake
+```
+
+2. download the board support package here:
+
+[http://downloadmirror.intel.com/23171/eng/Board\_Support\_Package\_Sources\_for\_Intel\_Quark\_v0.7.5.7z ](.md)
+
+3. Uncompressed
+
+```
+7z x Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z 
+```
+
+4. Rename your BSP folder with a shorter name
+
+```
+mv Board_Support_Package_*** BSPGLL 
+```
+
+5. Uncompress meta-clanton
+```
+
+hai@hai-Inspiron-1545:~$ cd BSPGLL/
+hai@hai-Inspiron-1545:~/BSPGLL$ tar -xvzf meta-clanton_v0.7.5.tar.gz 
+
+```
+
+6. set up poky
+Go to the new Yocto home folder
+```
+cd meta-clanton_...
+```
+
+Download, compile and set up Poky, a tool used by Yocto
+```
+./setup.sh
+source poky/oe-init-build-env yocto_build
+```
+
+7. copy the full image configuration from a sample:
+
+```
+cp ../meta-clanton-distro/recipes-core/images/image-full.bb ../meta-lanton-distro/recipes-core/images/image-sdk.bb
+
+```
+
+8. ... go to bitbake, got issue:(6/6)
+
+```
+
+
+hai@hai-Inspiron-1545:~/BSPGLL/meta-clanton_v0.7.5/yocto_build$ bitbake image-sdk -c populate-sdk
+Pseudo is not present but is required, building this first before the main build
+ERROR:  OE-core's config sanity checker detected a potential misconfiguration.
+    Either fix the cause of this error or at your own risk disable the checker (see sanity.conf).
+    Following is the list of potential problems / advisories:
+
+    Failed to create a file with a long name in TMPDIR. Please use a filesystem that does not unreasonably limit filename length.
+Failed to create a file with a long name in SSTATE_DIR. Please use a filesystem that does not unreasonably limit filename length.
+
+ERROR: Execution of event handler 'check_sanity_eventhandler' failed
+hai@hai-Inspiron-1545:~/BSPGLL/meta-clanton_v0.7.5/yocto_build$ 
+
+
+```
+
+9. try to install something. get from: http://elinux.org/EBC_Exercise_08_Installing_Development_Tools_-_bitbake
+
+```
+sudo apt-get install diffstat texi2html texinfo subversion chrpath gettext
+```
+
+10. got already install.
+
+11. try to install follow http://cwraig.id.au/?p=507
+
+```
+sudo apt-get install sed wget cvs subversion git-core coreutils unzip texi2html texinfo docbook-utils gawk python-pysqlite2 diffstat help2man make gcc build-essential g++ desktop-file-utils chrpath dosfstools kpartx
+
+```
+
+---
+
+Continues to work on it on 10/04/2014
+
+1. Copy Board support package to another partion.
+
+```
+hai@hai-Inspiron-1545:~$ cp Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z /media/TEST/
+```
+
+2. Uncompressed
+
+```
+7z x Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z 
+```
+
+3. Rename your BSP folder with a shorter name
+
+```
+mv Board_Support_Package_Sources_for_Intel_Quark_v0.7.5 BSPGLL
+```
+
+4. follow step 5,6 in the up
+--- end of report ---
+
+---
+
+Add your content here.  Format your content with:
+  * Text in **bold** or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages

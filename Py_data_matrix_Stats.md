@@ -1,0 +1,40 @@
+#Code to get stats from libdmtx py wrapper
+
+# PY : LIBDMTX : Get stats from read #
+
+Add your content here.
+```
+from pydmtx import DataMatrix
+dm_read = DataMatrix()
+
+img = Image.open( f )
+if img.mode != 'RGB':
+   img = img.convert('RGB')
+print dm_read.decode( img.size[0], img.size[1], buffer(img.tostring()) )
+
+result = []
+        i      = -1
+        for i in range(dm_read.count()):
+            data, bbox = dm_read.stats(i+1)
+            bbox = np.array(bbox)
+            x, y = bbox[:,0], bbox[:,1]
+            pos  = (np.min(x), np.min(y), np.max(x)-np.min(x),
+                    np.max(y)-np.min(y))
+            result.append({'ID':       (i+1),
+                            #'Data':     dm_read.message(i+1),
+                           'Data':     data,
+                           'Position': pos,
+                           'Type':     u'DataMatrix',
+                           'Quality':  10})
+```
+
+```
+   for count in range(2, dm_read.count()+1):
+                     stats = dm_read.stats(count)
+```
+# Details #
+
+Add your content here.  Format your content with:
+  * Text in **bold** or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages

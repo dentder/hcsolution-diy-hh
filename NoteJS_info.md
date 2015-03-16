@@ -1,0 +1,35 @@
+# Introduction #
+
+NodeJS
+
+
+# Details #
+
+
+http://stackoverflow.com/tags/node.js/info
+
+http://www.nodebeginner.org/
+
+http://blog.modulus.io/absolute-beginners-guide-to-nodejs
+
+NodeJS and zxing
+
+https://nodejsmodules.org/new/tags/zxing
+
+https://github.com/komola/node-zxing
+
+http://briancelenza.com/blog/posts/2-the-road-to-the-node-qr-decoder-part-1
+
+http://blog.modulus.io/absolute-beginners-guide-to-nodejs
+
+http://howtonode.org/introduction-to-npm  Using npm, Node Package Manager
+
+Package for NodeJS for :
+https://github.com/bcelenza/node-qr/tree/decoder
+### Need consideration to use NodeJS for web and also barcode decoder ###
+
+
+Add your content here.  Format your content with:
+  * Text in **bold** or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages

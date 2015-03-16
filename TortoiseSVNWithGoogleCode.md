@@ -1,0 +1,15 @@
+# How to connect the tortoiseSVN with your Google Code
+> # TortoiseSVN with Google Code #
+Here's how to import your project using TortoiseSVN, the most popular Windows SVN client.
+
+I assume you have created your Google Code (GC) project and it is called PROJECT and that the local source you want import is in a directory tree rooted at SOURCE.
+
+a) Go to your GC home page and select the "Profile" menu - this will give you your UID and then click the "Settings" tab to find your PASSWORD - this is not the same as your gmail password.
+
+b) In Windows explorer, right click n your SOURCE directory to get the Tortoise context menu and choose "Import..." This will pop up a dialog asking for the repository url. Enter the following:
+
+https://PROJECT.googlecode.com/svn/trunk
+
+c) You will be prompted for a userid & password - enter UID and PASSWORD described above.
+
+Your project should now be uploaded to the GC repository. From now on you can use the Tortoise repo-browser and other tools to access it via the url above.

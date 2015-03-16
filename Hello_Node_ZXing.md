@@ -1,0 +1,89 @@
+# Introduction #
+to create first code to use node-zxing to read barcode
+
+https://www.npmjs.org/package/node-zxing
+
+# Details #
+
+### Environment: ###
+
+  * Ubuntu
+  * java
+```
+hai@hai-Inspiron-1545:~/Galileo/hcsolution-diy-hh/V3_Galileo/Code/NodeJS$ java -version
+java version "1.6.0_27"
+OpenJDK Runtime Environment (IcedTea6 1.12.6) (6b27-1.12.6-1ubuntu0.12.04.2)
+OpenJDK Server VM (build 20.0-b12, mixed mode)
+```
+
+  * NodeJS
+  * NodeJS modules
+
+```
+hai@hai-Inspiron-1545:~/Galileo/hcsolution-diy-hh/V3_Galileo/Code/NodeJS$ npm ls
+
+/home/hai/Galileo/hcsolution-diy-hh/V3_Galileo/Code/NodeJS
+└── node-zxing@0.0.1
+
+```
+
+**Zxing java library**
+
+```
+zxinglib/:
+core  javase
+
+zxinglib/core:
+core.jar
+
+zxinglib/javase:
+javase.jar
+
+```
+### Code ###
+1. create file hellozxing.js
+
+```
+var qrdecoder = require('node-zxing')({ZXingLocation: "zxinglib"});
+var path = "pdf417ex01.jpg";
+qrdecoder.decode(path, 
+  function(err, out) {
+    console.log('Zxing hello world. Hoang Hai');
+    console.log('Error:  '+err);
+    console.log('Result:  '+out);
+  }
+);
+```
+
+2. run by nodejs
+```
+node hellozxing.js
+```
+
+
+3. result
+
+```
+null 'file:/home/hai/Galileo/hcsolution-diy-hh/V3_Galileo/Code/NodeJS/pdf417ex01.jpg (format: PDF417, type: TEXT):\nRaw result:\nINGREDIENTS: Unbleached enriched flour (thiamin mononitrate, riboflavin, \r\nniacin, ruduced iron), water, glucose-fructose or sugar, yeast, vegetable oil\r\nshortening, salt, defatted soya flour, calcium sulphate, amomonium chloride, \r\ncalcium propionate, sodium stearoyl-CQlactylate.\r\n\nParsed result:\nINGREDIENTS: Unbleached enriched flour (thiamin mononitrate, riboflavin, \r\nniacin, ruduced iron), water, glucose-fructose or sugar, yeast, vegetable oil\r\nshortening, salt, defatted soya flour, calcium sulphate, amomonium chloride, \r\ncalcium propionate, sodium stearoyl-CQlactylate.\r\n\n' ''
+Zxing hello world. Hoang Hai
+Error:  null
+Result:  INGREDIENTS: Unbleached enriched flour (thiamin mononitrate, riboflavin, 
+
+```
+
+### Experiment ###
+
+1. Download several picture form internet to test. it return result some in:
+
+**QR code**
+
+**EAN 13**
+
+**Data matrix**
+
+**PDF 47**
+
+Add your content here.  Format your content with:
+  * Text in **bold** or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages

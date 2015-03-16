@@ -1,0 +1,95 @@
+# Introduction #
+
+NodeJS + Eclipse for windows.
+Follow the instruction here:
+
+http://www.nodeclipse.org/updates/
+
+
+# Details #
+1. In windows, run Command ( winkey + R then CMD then enter
+
+2.  type
+
+```
+npm install -g nodeclipse  
+```
+
+Enter
+
+3. type
+```
+npm install -g express 
+```
+Enter
+
+4. Install zxing
+
+```
+npm install node-zxing
+```
+
+5. Install jave
+```
+npm install java
+```
+
+--> Fail
+
+6. and trying again installing node-gyp globally
+
+```
+npm install node-gyp -g
+```
+
+--> sucessful
+
+7. Install java again
+
+```
+npm install java --verbose
+```
+
+--> fail
+
+8. install java JDK
+```
+http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
+```
+
+9.Install Endine
+
+10. install python 2.7.6
+```
+https://www.python.org/download/releases/2.7.6/
+```
+
+11. add python folder c:\python27 to windows environment PATH parameter
+
+```
+Windows 7
+Select Computer from the Start menu
+Choose System Properties from the context menu
+Click Advanced system settings > Advanced tab
+Click on Environment Variables, under System Variables, find PATH, and click on it.
+In the Edit windows, modify PATH by adding the location of the class to the value for PATH. If you do not have the item PATH, you may select to add a new variable and add PATH as the name and the location of the class as the value.
+```
+
+12. Install jave again
+```
+npm install java
+```
+
+--> fail
+
+13. Windows SDK for Windows Server 2008 and .NET Framework 3.5
+```
+http://www.microsoft.com/en-us/download/details.aspx?id=11310
+```
+
+do not install Documentation and Sample, it take more 2GB and 5 hours for download.
+---
+Add your content here.  Format your content with:
+  * Text in **bold** or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages

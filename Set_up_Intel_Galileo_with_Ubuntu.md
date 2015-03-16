@@ -1,0 +1,29 @@
+# Introduction #
+
+1. Set up Intel Galileo with Ubuntu
+2. Upload the sketch
+3. Networking
+
+
+
+# Details #
+
+## 1. Set up Intel Galileo with Ubuntu ##
+> - Follow the instruction in: https://communities.intel.com/servlet/JiveServlet/previewBody/21837-102-6-25156/Galileo_RelNotes_329686_004.pdf
+> > Result: Successfully.
+## 2. Upload the Hello IDE ##
+follow the instruction in:
+[www.intel-software-academic-program.com/courses/diy/Intel\_Academic_-_DIY_-_InternetOfThings/IntelAcademic\_IoT\_02\_HelloWorldIDE.pdf]
+> > Result: Sucessfully
+
+## 3. Upload the networking ##
+
+Follow the instruction in:
+http://www.intel-software-academic-program.com/courses/diy/Intel_Academic_-_DIY_-_InternetOfThings/IntelAcademic_IoT_03_Networking.pdf
+
+`       byte mac[] = { 0x98, 0x4F, 0xEE, 0x00, 0x6D, 0x16 };  `
+**Result:**
+Add your content here.  Format your content with:
+  * Text in **bold** or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages

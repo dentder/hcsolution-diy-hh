@@ -1,0 +1,28 @@
+# Introduction #
+
+assume that you have svn in your computer
+
+
+# Details #
+
+1. First time to download the code use **svn checkout**
+
+2. before upload your file to server do the update **svn update**
+
+3. before upload your file to server do add file/folder to svn **svn add**
+
+4. Upload your file to server **svn commit**
+
+
+---
+
+issue:
+
+Interacting with an SVN server, ubuntu prompts me for the password to a '(null)' keyring.
+
+`rm ~/.gnome2/keyrings/login.keyring`
+
+Add your content here.  Format your content with:
+  * Text in **bold** or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
